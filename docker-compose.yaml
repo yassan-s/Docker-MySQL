@@ -14,8 +14,10 @@ services:
       MYSQL_PASSWORD: example
     ports:
       - 3307:3306
+      #ローカルPCからはポート3307で接続できる
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
+      #初期データ
 
 volumes:
-  db-mysql:
+  mysql-volume:
