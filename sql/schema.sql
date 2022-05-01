@@ -1,19 +1,17 @@
-DROP TABLE IF EXISTS user_info;
+DROP TABLE IF EXISTS games;
 
-CREATE TABLE user_info
+CREATE TABLE games
 (
 	id int unsigned AUTO_INCREMENT,
-	name VARCHAR(20) NOT NULL,
-	age int(10) NOT NULL,
-	email_address VARCHAR(20),
-
+	title VARCHAR(100) NOT NULL,
+	genre VARCHAR(100) NOT NULL,
+	price int(10) NOT NULL,
 	PRIMARY KEY(id)
 );
 
 INSERT INTO
-	user_info (name, age, email_address)
+	games (title, genre, price)
 VALUES
-	("Asann", 15, "A@A.com"),
-	("Bsann", 20, "B@B.com"),
-	("Csann", 25, NULL),
-	("Dsann", 30, "D@D.com");
+	('ELDEN RING', 'アクションRPG', 9240),
+	('Demons Souls', 'アクションRPG', 8690),
+	('Battlefield1', 'FPS', 4300);
